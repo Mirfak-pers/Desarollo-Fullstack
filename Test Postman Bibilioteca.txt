@@ -1,0 +1,38 @@
+Get http://localhost:8080/api/v1/libros
+
+"Muestra los libros en json"
+
+post http://localhost:8080/api/v1/libros
+
+json raw
+
+{   "id":200,
+    "isbn":"1234",
+    "titulo":"el mago de oz",
+    "editorial":"barco de papel",
+    "fechaPublicacion":1999,
+    "autor":"marco"},
+{"id":100,
+    "isbn":"5678",
+    "titulo":"Papelucho",
+    "editorial":"Austral",
+    "fechaPublicacion":1980,
+    "autor":"Marcela paz"}
+
+Get http://localhost:8080/api/v1/libros/100
+
+"trae libro por id"
+
+put http://localhost:8080/api/v1/libros/100
+"Actualizar libro por id"
+
+{   "id":200,
+    "isbn":"1234",
+    "titulo":"el mago de OZ",
+    "editorial":"barco de papel",
+    "fechaPublicacion":1999,
+    "autor":"marco"
+    }
+
+delete http://localhost:8080/api/v1/libros/100
+"eliminar libro por id"
